@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HOMEPAGE */
+.home__container {
+  padding: 74px 69px 50px 118px;
+  max-width: 1533px;
+  margin: 0 auto;
+}
+
+.home__profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home__profile__name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.home__profile__name img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  color: white;
+}
+
+.home__profile__name h1 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.home__profile__name h2 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.home__profile__bio {
+  max-width: 740px;
+  background: #3655b3;
+  border-radius: 7px;
+  color: #a6bcff;
+  padding: 32px;
+}
+
+.home__profile__bio p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+@media screen and (max-width: 1300px) {
+  .home__container {
+    padding: 50px;
+  }
+
+  .home__profile {
+    display: block;
+  }
+
+  .home__profile__name img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .home__profile__bio {
+    margin-top: 30px;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home__container {
+    padding: 25px;
+  }
+
+  .home__profile {
+    display: block;
+  }
+
+  .home__profile__name img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .home__profile__name h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .home__profile__name h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .home__profile__bio {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .home__profile__bio p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+/* REPOCARD */
+.repoCard {
+  margin-top: 116px;
+}
+
+.repoCard__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3655b3;
+}
+
+.repoCard__content {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+
+.repoCard__container {
+  max-width: 459px;
+  height: 230px;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 2px 2px 30px rgba(77, 77, 255, 0.3);
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.repoCard__details h4 {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 33px;
+  margin-bottom: 15px;
+}
+
+.repoCard__details p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 16px;
+}
+
+.repoCard__details h5 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #3655b3;
+}
+
+@media screen and (max-width: 1300px) {
+  .repoCard {
+    margin-top: 50px;
+  }
+
+  .repoCard__title {
+    font-size: 20px;
+  }
+
+  .repoCard__content {
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+
+  .repoCard__container {
+    padding: 20px;
+    height: fit-content;
+  }
+
+  .repoCard__details h4 {
+    font-size: 16px;
+  }
+
+  .repoCard__details p,
+  .repoCard__details h5 {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .repoCard__content {
+    margin-top: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pagination a {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  border-radius: 2px;
+}
+
+.pagination li.active {
+  background: rgba(77, 77, 255, 0.3);
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .pagination {
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .pagination a {
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pagination {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .pagination a {
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+  }
+}
