@@ -1,7 +1,8 @@
 <template>
   <div class="repoCard">
     <h4 class="repoCard__title">My Repositories</h4>
-    <div class="repoCard__content">
+    <div v-if="loading" class="loader"><LoadingSpinner /></div>
+    <div v-else class="repoCard__content">
       <router-link
         :to="'/repository/' + repo.name"
         class="repoCard__container"
@@ -42,7 +43,11 @@
 </template>
 
 <script>
+import LoadingSpinner from "./LoadingSpinner.vue";
 export default {
+  components: {
+    LoadingSpinner,
+  },
   data() {
     return {
       repository: [],
@@ -50,9 +55,11 @@ export default {
         perPage: 6,
         currentPage: 1,
       },
+      loading: true,
     };
   },
   async mounted() {
+    this.loading = true;
     await this.getRepositories();
   },
   methods: {
@@ -62,9 +69,15 @@ export default {
       );
       const data = await response.json();
       this.repository = data;
+      setTimeout(() => {
+        this.loading = false; // hide the loader after 10 seconds
+      }, 500);
     },
+
     updateCurrentPage(page) {
       this.pagination.currentPage = page;
+      this.loading = true;
+      this.getRepositories();
     },
   },
   computed: {

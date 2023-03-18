@@ -26,6 +26,15 @@ img {
   max-width: 100%;
 }
 
+.loader {
+  margin-top: 10px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* HOMEPAGE */
 .home__container {
   padding: 74px 69px 50px 118px;
@@ -365,8 +374,19 @@ img {
   cursor: pointer;
 }
 
+.homePage_Route div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.homePage_Route img {
+  width: 12px;
+  height: 12px;
+}
+
 .homePage_Route span {
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   height: 0px;
   margin-top: 6px;
 }
