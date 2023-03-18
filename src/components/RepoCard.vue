@@ -2,27 +2,26 @@
   <div class="repoCard">
     <h4 class="repoCard__title">My Repositories</h4>
     <div class="repoCard__content">
-      <div
+      <router-link
+        :to="'/repository/' + repo.name"
         class="repoCard__container"
         v-for="repo in paginatedRepos"
         :key="repo.id"
       >
-        <router-link :to="'/repository/' + repo.name">
-          <div class="repoCard__details">
-            <h4>{{ repo.name }}</h4>
-            <div>
-              <p class="repo-description" v-if="repo.description">
-                {{ repo.description }}
-              </p>
-              <p class="repo-description" v-else>
-                Project showcases problem-solving skills and software
-                development expertise with clean code.
-              </p>
-            </div>
-            <h5>{{ repo.size }}KB</h5>
+        <div class="repoCard__details">
+          <h4>{{ repo.name }}</h4>
+          <div>
+            <p class="repo-description" v-if="repo.description">
+              {{ repo.description }}
+            </p>
+            <p class="repo-description" v-else>
+              Project showcases problem-solving skills and software development
+              expertise with clean code.
+            </p>
           </div>
-        </router-link>
-      </div>
+          <h5>{{ repo.size }}KB</h5>
+        </div>
+      </router-link>
     </div>
 
     <ul v-if="pageCount > 1" class="pagination">

@@ -270,3 +270,153 @@ img {
     height: 25px;
   }
 }
+
+/* Single Repo Page */
+.main {
+  background: #2c2c61;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.singleRepo {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 30px rgba(77, 77, 255, 0.3);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.singleRepo__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.singleRepo__title h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.singleRepo__title span {
+  background: #a6bcff;
+  border-radius: 20px;
+  color: #3655b3;
+  font-size: 12px;
+  padding: 3px 6px;
+  font-weight: 700;
+}
+
+.repo__description {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.repo__lang {
+  margin-top: 20px;
+}
+
+.repo__lang h4 {
+  font-size: 18px;
+  color: #3655b3;
+}
+
+.repo__lang p {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.singleRepo__footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.singleRepo__footerDates {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.singleRepo__footerDates p {
+  font-weight: 700;
+  color: #3655b3;
+}
+
+.singleRepo__footerDates span {
+  font-weight: 500;
+  color: black;
+}
+
+.singleRepo__footerSize {
+  color: #3655b3;
+}
+
+.homePage_Route {
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.homePage_Route span {
+  border: 2px solid #ffffff;
+  height: 0px;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 480px) {
+  .singleRepo__title {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .singleRepo__title h1 {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .singleRepo__title span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .repo__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .repo__lang h4 {
+    font-size: 16px;
+  }
+
+  .repo__lang p {
+    font-size: 14px;
+    margin-top: 2px;
+  }
+
+  .singleRepo__footer {
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .singleRepo__footerDates p,
+  .singleRepo__footerDates span {
+    font-size: 13px;
+  }
+
+  .singleRepo__footerSize {
+    margin-bottom: 5px;
+  }
+
+  .homePage_Route {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+}
